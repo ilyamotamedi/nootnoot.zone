@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge; chrome=1">
+    <meta name="application-name" content="Application Name">
+
+    <meta name="description" content="Welcome to the noot noot zone, where you can NOOT NOOT to your heart's content!">
+    <meta name="rating" content="General">
+
+    <title>Noot Noot!</title>
+
+    <link rel="icon" href="nootnoot.png" type="image/png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container d-flex flex-column align-items-center justify-content-center" style="min-height: 83vh;">
+      <img src="nootnoot.png" class="rounded-circle" alt="" style="aspect-ratio: 1.0; max-width: 300px">
+      <h1 class="display-1 font-weight-bold">NOOT NOOT</h1>
+      <button role="button" id="nootNootButton" class="btn btn-lg btn-danger rounded-pill">
+        Click here to <strong>NOOT NOOT</strong>
+      </button>
+      <audio id="nootNootSound" src="nootnoot.mp3" class="d-none"></audio>
+      <script type="text/javascript">
+        function ready(fn) {
+          if (document.readyState != 'loading'){
+            fn();
+          } else {
+            document.addEventListener('DOMContentLoaded', fn)
+          }
+        }
+        
+        ready(function() {
+          document.getElementById('nootNootButton').addEventListener('click', function() {
+            document.getElementById('nootNootSound').play()
+          })
+        })
+      </script>
+    </div>
+  </body>
+</html>
